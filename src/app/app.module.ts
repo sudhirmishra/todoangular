@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {
+  InputTextModule, 
+  // DataTableModule, ButtonModule, DialogModule,
+  // CheckboxModule, DataListModule,
+   MenubarModule
+} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -10,7 +16,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // PrimeNG
+    InputTextModule,
+    //  DataTableModule, ButtonModule, DialogModule,
+    // CheckboxModule, DataListModule, 
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
