@@ -12,13 +12,13 @@ export class ToDoEntry {
     }
 
     increasePriority(){
-        if(this.priority < 5){
+        if(this.priority < 3){
             this.priority += 1;
         }
     }
 
     decreasePriority(){
-        if(this.priority > 0){
+        if(this.priority > 1){
             this.priority -= 1;
         }
     }

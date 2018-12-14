@@ -7,7 +7,7 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todolist';
+  title = 'Easy To-Do';
   items: MenuItem[];
   ngOnInit() {
     this.items = [

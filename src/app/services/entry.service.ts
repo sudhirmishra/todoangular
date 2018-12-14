@@ -10,6 +10,12 @@ export class EntryService {
 
   constructor() {
     this.entries = [];
+    this.addEntry('Dummy Entry 1', 1);
+    this.addEntry('Dummy Entry 2', 3);
+    this.addEntry('Dummy Entry 3', 2);
+    this.addEntry('Dummy Entry 4', 1);
+    this.addEntry('Dummy Entry 5', 3);
+    this.addEntry('Dummy Entry 6', 2);
   }
 
   private getUniqueId():number{
@@ -21,14 +27,19 @@ export class EntryService {
     this.entries.push(new ToDoEntry(this.getUniqueId(), title, priority));
   }
 
-  removeEntry(entry:ToDoEntry):void{
-    this.entries = this.entries.filter( e => {
-      e.getId() != entry.getId()
-    });
+  removeEntry(entry:ToDoEntry):ToDoEntry[]{
+    this.entries = this.entries.filter(  
+      e => e.getId() != entry.getId()
+    );
+    return this.entries;
   }
 
   getEntry(id:number){
     return this.entries.find( e => e.getId() == id);
+  }
+
+  getEntries():ToDoEntry[]{
+    return this.entries;
   }
 
 

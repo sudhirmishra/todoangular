@@ -9,10 +9,12 @@ import {
   // CheckboxModule, DataListModule,
    MenubarModule
 } from 'primeng/primeng';
+import { ToDoItemComponent } from './components/to-do-item/to-do-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToDoItemComponent
   ],
   imports: [
     BrowserModule,

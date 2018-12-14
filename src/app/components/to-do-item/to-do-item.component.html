@@ -1,0 +1,25 @@
+<div *ngFor='let entry of entries'>
+  <div>
+    <table>
+      <tr>
+        <td>
+          <input type="checkbox" *ngIf="entry.status == 0" (click)="markCompleted(entry)">
+          <span *ngIf="entry.status == 1">&nbsp;&nbsp;&#x2714;&nbsp;</span>
+        </td>
+        <td>
+          <input type="text" value="{{entry.title}}">
+        </td>
+        <td>
+          <button type='button' (click)="increasePriority(entry)">&#x21bf;</button>
+        </td>
+        <td>
+          <button type='button' (click)="decreasePriority(entry)">&#x21c2;</button>
+        </td>
+        <td>
+          <button type='button' (click)="removeEntry(entry);">&#x2421;</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+{{entries | json}}
